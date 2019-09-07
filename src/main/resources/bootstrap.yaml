@@ -1,0 +1,14 @@
+spring:
+  application:
+    name: betapp-mailing-svc
+  cloud:
+    config:
+      uri: http://localhost:8888
+  profiles:
+    active: default
+  datasource:
+    url: jdbc:mysql://${betapp-mailing-svc.hostname}:${betapp-mailing-svc.port}/${betapp-mailing-svc.dbName}?useLegacyDatetimeCode=false&autoReconnect=true
+    username: ${betapp-mailing-svc.username}
+    password: ${betapp-mailing-svc.password}
+
+
